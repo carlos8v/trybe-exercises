@@ -9,4 +9,5 @@ Trybe is a school for people who want to build a successful career in technology
 - [x] Basic of git;
 - [x] HTML;
 - [x] CSS;
+- [x] Basic of Javascript;
 - [ ] Loading...
