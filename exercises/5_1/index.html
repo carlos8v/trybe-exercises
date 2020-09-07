@@ -70,6 +70,15 @@
             document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - Javascript';
         }
         fixH1Text();
+
+        function changeTextToUppercase() {
+            let pList = document.getElementsByTagName('p');
+            for (let key in pList) {
+                let newText = String(pList[key].innerText);
+                pList[key].innerText = newText.toUpperCase();
+            }
+        }
+        changeTextToUppercase();
     </script>
   </body>
 </html>
