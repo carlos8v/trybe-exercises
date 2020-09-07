@@ -79,6 +79,15 @@
             }
         }
         changeTextToUppercase();
+
+        function showPTextOnConsole() {
+            let pList = document.getElementsByTagName('p');
+            
+            for (let i = 0; i <  pList.length; i += 1) {
+                console.log(pList[i].innerText);
+            }
+        }
+        showPTextOnConsole();
     </script>
   </body>
 </html>
