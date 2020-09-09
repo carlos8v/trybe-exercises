@@ -93,12 +93,20 @@
         document.querySelector('.main-content').appendChild(div);
       }
 
+      function setimoDesafio() {
+        let img = document.createElement('img');
+        img.src = 'https://picsum.photos/200';
+        img.classList.add('small-image');
+        document.querySelector('.left-content').appendChild(img);
+      }
+
       primeiroDesafio();
       segundoDesafio();
       terceiroDesafio();
       quartoDesafio();
       quintoDesafio();
       sextoDesafio();
+      setimoDesafio();
     </script>
   </body>
 </html>
