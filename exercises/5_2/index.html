@@ -77,13 +77,21 @@
 
       function quartoDesafio() {
         let p = document.createElement('p');
+        p.innerText = "Texto de exemplo";
         document.querySelector('.center-content').appendChild(p);
+      }
+
+      function quintoDesafio() {
+        let div = document.createElement('div');
+        div.classList.add('left-content');
+        document.querySelector('.main-content').appendChild(div);
       }
 
       primeiroDesafio();
       segundoDesafio();
       terceiroDesafio();
       quartoDesafio();
+      quintoDesafio();
     </script>
   </body>
 </html>
