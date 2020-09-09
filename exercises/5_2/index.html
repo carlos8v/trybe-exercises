@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function primeiroDesafio() {
+        let h1 = document.createElement('h1');
+        h1.innerText = 'Exercício 5.2 - JavaScript DOM';
+        document.body.appendChild(h1);
+      }
+
+      function segundoDesafio() {
+        let div = document.createElement('div');
+        div.classList.add('main-content');
+        document.body.appendChild(div);
+      }
+
+      function terceiroDesafio() {
+        let div = document.createElement('div');
+        div.classList.add('center-content');
+        document.querySelector('.main-content').appendChild(div);
+      }
+
+      function quartoDesafio() {
+        let p = document.createElement('p');
+        p.innerText = "Texto de exemplo";
+        document.querySelector('.center-content').appendChild(p);
+      }
+
+      function quintoDesafio() {
+        let div = document.createElement('div');
+        div.classList.add('left-content');
+        document.querySelector('.main-content').appendChild(div);
+      }
+      
+      function sextoDesafio() {
+        let div = document.createElement('div');
+        div.classList.add('right-content');
+        document.querySelector('.main-content').appendChild(div);
+      }
+
+      function setimoDesafio() {
+        let img = document.createElement('img');
+        img.src = 'https://picsum.photos/200';
+        img.classList.add('small-image');
+        document.querySelector('.left-content').appendChild(img);
+      }
+
+      function oitavoDesafio() {
+        let ul = document.createElement('ul');
+        let values = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+        for (let i = 0; i < 10; i += 1) {
+          let li = document.createElement('li');
+          li.innerText = values[i];
+          ul.appendChild(li);
+        }
+        document.querySelector('.right-content').appendChild(ul);
+      }
+
+      function nonoDesafio() {
+        for (let i = 0; i < 3; i += 1) {
+          let h3 = document.createElement('h3');
+          document.querySelector('.main-content').appendChild(h3);
+        }
+      }
+
+      primeiroDesafio();
+      segundoDesafio();
+      terceiroDesafio();
+      quartoDesafio();
+      quintoDesafio();
+      sextoDesafio();
+      setimoDesafio();
+      oitavoDesafio();
+      nonoDesafio();
+
+      document.querySelector('h1').classList.add('title');
+      document.querySelectorAll('h3').forEach(h3 => h3.classList.add('description'));
+      document.querySelector('.left-content').parentElement.removeChild(document.querySelector('.left-content'));
+      document.querySelector('.right-content').style.margin = '0 auto';
+      document.querySelector('.center-content').parentElement.style.background = 'green';
+      for (let i = 0; i < 2; i += 1) {
+        document.querySelector('ul').removeChild(document.querySelector('ul').lastChild);
+      }
+    </script>
+  </body>
+</html>
