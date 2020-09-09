@@ -127,6 +127,15 @@
       setimoDesafio();
       oitavoDesafio();
       nonoDesafio();
+
+      document.querySelector('h1').classList.add('title');
+      document.querySelectorAll('h3').forEach(h3 => h3.classList.add('description'));
+      document.querySelector('.left-content').parentElement.removeChild(document.querySelector('.left-content'));
+      document.querySelector('.right-content').style.margin = '0 auto';
+      document.querySelector('.center-content').parentElement.style.background = 'green';
+      for (let i = 0; i < 2; i += 1) {
+        document.querySelector('ul').removeChild(document.querySelector('ul').lastChild);
+      }
     </script>
   </body>
 </html>
