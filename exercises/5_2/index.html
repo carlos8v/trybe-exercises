@@ -100,6 +100,17 @@
         document.querySelector('.left-content').appendChild(img);
       }
 
+      function oitavoDesafio() {
+        let ul = document.createElement('ul');
+        let values = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+        for (let i = 0; i < 10; i += 1) {
+          let li = document.createElement('li');
+          li.innerText = values[i];
+          ul.appendChild(li);
+        }
+        document.querySelector('.right-content').appendChild(ul);
+      }
+
       primeiroDesafio();
       segundoDesafio();
       terceiroDesafio();
@@ -107,6 +118,7 @@
       quintoDesafio();
       sextoDesafio();
       setimoDesafio();
+      oitavoDesafio();
     </script>
   </body>
 </html>
