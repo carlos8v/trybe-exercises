@@ -59,7 +59,7 @@
     <script>
       function primeiroDesafio() {
         let h1 = document.createElement('h1');
-        h1.innerText = "Exercício 5.2 - JavaScript DOM"
+        h1.innerText = 'Exercício 5.2 - JavaScript DOM';
         document.body.appendChild(h1);
       }
 
@@ -72,12 +72,18 @@
       function terceiroDesafio() {
         let div = document.createElement('div');
         div.classList.add('center-content');
-        document.querySelector(".main-content").appendChild(div);
+        document.querySelector('.main-content').appendChild(div);
+      }
+
+      function quartoDesafio() {
+        let p = document.createElement('p');
+        document.querySelector('.center-content').appendChild(p);
       }
 
       primeiroDesafio();
       segundoDesafio();
       terceiroDesafio();
+      quartoDesafio();
     </script>
   </body>
 </html>
