@@ -10,4 +10,6 @@ Trybe is a school for people who want to build a successful career in technology
 - [x] HTML;
 - [x] CSS;
 - [x] Basic of Javascript;
+- [x] Web Storage;
+- [x] Event Handlers
 - [ ] Loading...
