@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wrapper">
+    <form method="GET" enctype="multipart/form-data" class="wrapper">
         <fieldset>
             <legend>Dados Pessoais</legend>
             <div class="input-block">
@@ -43,7 +43,34 @@
                 <label for="apartment">Apartamento</label>
             </div>
         </fieldset>
-    </div>
+        <fieldset>
+            <legend>Emprego</legend>
+            <div class="input-block">
+                <label for="resume">Resumo do currículo:</label>
+                <textarea
+                    name="resume"
+                    id="resume"
+                    required="required"
+                    maxlength="1000"
+                    cols="10"
+                    rows="8"
+                ></textarea>
+            </div>
+            <div class="input-block">
+                <label for="job">Cargo:</label>
+                <input type="text" name="job" id="job" maxlength="40" required="required" />
+            </div>
+            <div class="input-block">
+                <label for="job-description">Descrição do cargo:</label>
+                <input type="text" name="job-description" id="job-description" maxlength="500" required="required" />
+            </div>
+            <div class="input-block">
+                <label for="date">Data de início:</label>
+                <input type="text" name="date" id="date" maxlength="500" required="required" />
+            </div>
+        </fieldset>
+        <button type="submit">Enviar</button>
+    </form>
     <script src="script.js"></script>
 </body>
 </html>

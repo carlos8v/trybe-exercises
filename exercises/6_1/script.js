@@ -38,6 +38,12 @@ function initializeStates() {
         select.appendChild(option);
     }
 }
+
+function submitForm(e) {
+    console.log(e);
+}
+
 document.body.onload = function () {
     initializeStates();
+    document.querySelector('button').addEventListener('submit', (e) => submitForm(e));
 }
