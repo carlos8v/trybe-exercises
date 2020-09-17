@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div class="input-block">
+                <label for="name">Nome:</label>
+                <input name="name" id="name" type="text" required="required" maxlength="40"/>
+            </div>
+            <div class="input-block">
+                <label for="email">Email:</label>
+                <input name="email" id="email" type="text" required="required" maxlength="50"/>
+            </div>
+            <div class="input-block">
+                <label for="cpf">CPF:</label>
+                <input name="cpf" id="cpf" type="text" required="required" maxlength="8"/>
+            </div>
+            <div class="input-block">
+                <label for="address">Endereço:</label>
+                <input name="address" id="address" type="text" required="required" maxlength="200"/>
+            </div>
+            <div class="input-block">
+                <label for="city">Cidade:</label>
+                <input name="city" id="city" type="text" required="required" maxlength="28"/>
+            </div>
+            <div class="input-block">
+                <label for="state">Estado:</label>
+                <select name="state" id="state" required="required">
+                    <option value="" selected>Selecione seu estado</option>
+                </select>
+            </div>
+            <div class="input-block">
+                <input name="habitation" id="home" type="radio" />
+                <label for="home">Casa</label>
+                <input name="habitation" id="apartment" type="radio" />
+                <label for="apartment">Apartamento</label>
+            </div>
+        </fieldset>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
