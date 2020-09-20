@@ -40,19 +40,22 @@ function initializeStates() {
 
 function submitForm(event) {
     event.preventDefault();
-    const date = event.target.children[1].children[4].children[1];
+    const date = document.querySelector('.date');
     const dateValues = date.value.split('/');
     let error = false;
     if (dateValues.length !== 0) {
-        if (parseInt(dateValues[0]) < 0 || parseInt(dateValues[0]) > 31
-        || parseInt(dateValues[1]) <= 0 || parseInt*dateValues[1] > 12
-        || parseInt(dateValues[2]) < 0) {
+        if (parseInt(dateValues[2]) < 0 || parseInt(dateValues[2]) > 31
+        || parseInt(dateValues[1]) <= 0 || parseInt(dateValues[1]) > 12
+        || parseInt(dateValues[0]) < 0) {
             error = true
         }
     }
-    if (error) alert('Data incorreta');
-    document.querySelector('.wrapper').style.display = 'none';
-    showData();
+    if (error) {
+        alert('Data incorreta');
+    } else {
+        document.querySelector('.wrapper').style.display = 'none';
+        showData();
+    }
 }
 
 function showData() {
