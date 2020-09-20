@@ -81,4 +81,5 @@ document.body.onload = function () {
     initializeStates();
     document.querySelector('.clear').addEventListener('click', clean);
     document.querySelector('form').addEventListener('submit', submitForm);
+    document.getElementById('date').DatePickerX.init();
 }
