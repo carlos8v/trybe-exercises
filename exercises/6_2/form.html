@@ -4,75 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bulma.min.css">
 </head>
 <body>
-    <form method="GET" enctype="multipart/form-data" class="wrapper">
-        <fieldset>
-            <legend>Dados Pessoais</legend>
-            <div class="input-block">
-                <label for="name">Nome:</label>
-                <input name="name" id="name" type="text" required maxlength="40"/>
+    <section class="section">
+        <form method="GET" enctype="multipart/form-data" class="wrapper">
+            <div class="field">
+                <h1 class="title">Dados Pessoais</h1>
+                <div class="field">
+                    <label for="name">Nome:</label>
+                    <div class="control">
+                        <input name="name" id="name" type="text" required maxlength="40" class="input"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="email">Email:</label>
+                    <div class="control">
+                        <input name="email" id="email" type="text" required maxlength="50" class="input"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="cpf">CPF:</label>
+                    <div class="control">
+                        <input name="cpf" id="cpf" type="text" required maxlength="8" class="input"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="address">Endereço:</label>
+                    <div class="control">
+                        <input name="address" id="address" type="text" required maxlength="200" class="input"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="city">Cidade:</label>
+                    <div class="control">
+                        <input name="city" id="city" type="text" required maxlength="28" class="input"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="state">Estado:</label>
+                    <div class="control">
+                        <div class="select">
+                            <select name="state" id="state" required>
+                                <option value="" selected>Selecione seu estado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <label for="home" class="radio">
+                            <input name="habitation" id="home" type="radio" value="home" checked required/>
+                            Casa
+                        </label>
+                        <label for="apartment" class="radio">
+                            <input name="habitation" id="apartment" type="radio" value="apartment" required/>
+                            Apartamento
+                        </label>
+                    </div>
+                </div>
             </div>
-            <div class="input-block">
-                <label for="email">Email:</label>
-                <input name="email" id="email" type="text" required maxlength="50"/>
+            <div class="field">
+                <h1 class="title">Emprego</h1>
+                <div class="field">
+                    <label class="subtitle" for="resume">Resumo do currículo:</label>
+                    <textarea
+                        name="resume"
+                        id="resume"
+                        required
+                        maxlength="1000"
+                        cols="10"
+                        rows="8"
+                        class="textarea"
+                        placeholder="Trabalhei com..."
+                    ></textarea>
+                </div>
+                <div class="field">
+                    <label for="job">Cargo:</label>
+                    <div class="control">
+                        <input type="text" name="job" id="job" maxlength="40" required class="input"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="job-description">Descrição do cargo:</label>
+                    <div class="control">
+                        <input type="text" name="job-description" id="job-description" maxlength="500" required class="input"/>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="date">Data de início:</label>
+                    <div class="control">
+                        <input type="text" name="date" id="date" maxlength="500" required class="input"/>
+                    </div>
+                </div>
             </div>
-            <div class="input-block">
-                <label for="cpf">CPF:</label>
-                <input name="cpf" id="cpf" type="text" required maxlength="8"/>
-            </div>
-            <div class="input-block">
-                <label for="address">Endereço:</label>
-                <input name="address" id="address" type="text" required maxlength="200"/>
-            </div>
-            <div class="input-block">
-                <label for="city">Cidade:</label>
-                <input name="city" id="city" type="text" required maxlength="28"/>
-            </div>
-            <div class="input-block">
-                <label for="state">Estado:</label>
-                <select name="state" id="state" required>
-                    <option value="" selected>Selecione seu estado</option>
-                </select>
-            </div>
-            <div class="input-block">
-                <input name="habitation" id="home" type="radio" value="home" checked required/>
-                <label for="home">Casa</label>
-                <input name="habitation" id="apartment" type="radio" value="apartment" required/>
-                <label for="apartment">Apartamento</label>
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend>Emprego</legend>
-            <div class="input-block">
-                <label for="resume">Resumo do currículo:</label>
-                <textarea
-                    name="resume"
-                    id="resume"
-                    required
-                    maxlength="1000"
-                    cols="10"
-                    rows="8"
-                ></textarea>
-            </div>
-            <div class="input-block">
-                <label for="job">Cargo:</label>
-                <input type="text" name="job" id="job" maxlength="40" required/>
-            </div>
-            <div class="input-block">
-                <label for="job-description">Descrição do cargo:</label>
-                <input type="text" name="job-description" id="job-description" maxlength="500" required/>
-            </div>
-            <div class="input-block">
-                <label for="date">Data de início:</label>
-                <input type="text" name="date" id="date" maxlength="500" required/>
-            </div>
-        </fieldset>
-        <button type="submit">Enviar</button>
-        <button class="clear" type="button">Limpar</button>
-    </form>
-    <div class="data"></div>
+            <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-link">Enviar</button>
+                </div>
+                <div class="control">
+                  <button class="button is-link is-light clear">Limpar</button>
+                </div>
+              </div>
+        </form>
+        <div class="data"></div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
