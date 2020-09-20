@@ -32,18 +32,53 @@ function initializeStates() {
 
     for (let key in states) {
         const option = document.createElement('option');
-        console.log(option);
         option.value = key;
         option.innerText = states[key];
         select.appendChild(option);
     }
 }
 
-function submitForm(e) {
-    console.log(e);
+function submitForm(event) {
+    event.preventDefault();
+    const date = event.target.children[1].children[4].children[1];
+    const dateValues = date.value.split('/');
+    let error = false;
+    if (dateValues.length !== 0) {
+        if (parseInt(dateValues[0]) < 0 || parseInt(dateValues[0]) > 31
+        || parseInt(dateValues[1]) <= 0 || parseInt*dateValues[1] > 12
+        || parseInt(dateValues[2]) < 0) {
+            error = true
+        }
+    }
+    if (error) alert('Data incorreta');
+    document.querySelector('.wrapper').style.display = 'none';
+    showData();
+}
+
+function showData() {
+    let text = '';
+    const select = document.querySelector('select');
+    const textarea = document.querySelector('textarea');
+    document.querySelectorAll('input').forEach(input => {
+        if (input.type === 'radio') {
+            if (input.checked) {
+                text += `<p>${input.name} : ${input.value}</p>`;
+            }
+        } else {
+            text += `<p>${input.name} : ${input.value}</p>`;
+        }
+    })
+    text += `<p>${select.name} : ${select.value}</p>`;
+    text += `<p>${textarea.name} : ${textarea.value}<p>`;
+    document.querySelector('.data').innerHTML = text;
+}
+
+function clean() {
+    document.location.reload();
 }
 
 document.body.onload = function () {
     initializeStates();
-    document.querySelector('button').addEventListener('submit', (e) => submitForm(e));
+    document.querySelector('.clear').addEventListener('click', clean);
+    document.querySelector('form').addEventListener('submit', submitForm);
 }

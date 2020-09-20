@@ -12,34 +12,34 @@
             <legend>Dados Pessoais</legend>
             <div class="input-block">
                 <label for="name">Nome:</label>
-                <input name="name" id="name" type="text" required="required" maxlength="40"/>
+                <input name="name" id="name" type="text" required maxlength="40"/>
             </div>
             <div class="input-block">
                 <label for="email">Email:</label>
-                <input name="email" id="email" type="text" required="required" maxlength="50"/>
+                <input name="email" id="email" type="text" required maxlength="50"/>
             </div>
             <div class="input-block">
                 <label for="cpf">CPF:</label>
-                <input name="cpf" id="cpf" type="text" required="required" maxlength="8"/>
+                <input name="cpf" id="cpf" type="text" required maxlength="8"/>
             </div>
             <div class="input-block">
                 <label for="address">Endereço:</label>
-                <input name="address" id="address" type="text" required="required" maxlength="200"/>
+                <input name="address" id="address" type="text" required maxlength="200"/>
             </div>
             <div class="input-block">
                 <label for="city">Cidade:</label>
-                <input name="city" id="city" type="text" required="required" maxlength="28"/>
+                <input name="city" id="city" type="text" required maxlength="28"/>
             </div>
             <div class="input-block">
                 <label for="state">Estado:</label>
-                <select name="state" id="state" required="required">
+                <select name="state" id="state" required>
                     <option value="" selected>Selecione seu estado</option>
                 </select>
             </div>
             <div class="input-block">
-                <input name="habitation" id="home" type="radio" />
+                <input name="habitation" id="home" type="radio" value="home" checked required/>
                 <label for="home">Casa</label>
-                <input name="habitation" id="apartment" type="radio" />
+                <input name="habitation" id="apartment" type="radio" value="apartment" required/>
                 <label for="apartment">Apartamento</label>
             </div>
         </fieldset>
@@ -50,7 +50,7 @@
                 <textarea
                     name="resume"
                     id="resume"
-                    required="required"
+                    required
                     maxlength="1000"
                     cols="10"
                     rows="8"
@@ -58,19 +58,21 @@
             </div>
             <div class="input-block">
                 <label for="job">Cargo:</label>
-                <input type="text" name="job" id="job" maxlength="40" required="required" />
+                <input type="text" name="job" id="job" maxlength="40" required/>
             </div>
             <div class="input-block">
                 <label for="job-description">Descrição do cargo:</label>
-                <input type="text" name="job-description" id="job-description" maxlength="500" required="required" />
+                <input type="text" name="job-description" id="job-description" maxlength="500" required/>
             </div>
             <div class="input-block">
                 <label for="date">Data de início:</label>
-                <input type="text" name="date" id="date" maxlength="500" required="required" />
+                <input type="text" name="date" id="date" maxlength="500" required/>
             </div>
         </fieldset>
         <button type="submit">Enviar</button>
+        <button class="clear" type="button">Limpar</button>
     </form>
+    <div class="data"></div>
     <script src="script.js"></script>
 </body>
 </html>
