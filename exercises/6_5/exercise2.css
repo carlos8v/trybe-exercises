@@ -1,0 +1,65 @@
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body, .container {
+    width: 100%;
+    height: 100%;
+    color: rgb(51, 51, 51);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container header nav {
+    display: none;
+}
+
+.container header p {
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 10px 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.container aside {
+    padding: 15px 30px;
+}
+
+.container aside h2 {
+    margin-bottom: 10px;
+}
+
+.container article {
+    padding: 10px;
+    line-height: 20pt;
+}
+
+.container article h1 {
+    font-size: 1.5rem;
+}
+
+.container article p {
+    margin: 10px 0;
+}
+
+footer {
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+}
+
+footer p {
+    line-height: 15pt;
+    margin: 10px 0;
+}
