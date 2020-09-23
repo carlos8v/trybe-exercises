@@ -15,9 +15,18 @@ body, .container {
     color: rgb(51, 51, 51);
 }
 
+li {
+    list-style-type: none;
+}
+
 .container {
     display: flex;
     flex-direction: column;
+}
+
+.container header {
+    padding: 10px 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .container header nav {
@@ -27,8 +36,6 @@ body, .container {
 .container header p {
     font-size: 1.2rem;
     font-weight: 800;
-    padding: 10px 5px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .container aside {
@@ -62,4 +69,39 @@ footer {
 footer p {
     line-height: 15pt;
     margin: 10px 0;
+}
+
+@media screen and (min-width: 800px) {
+
+    .container header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 30px;
+    }
+
+    .container header nav {
+        display: block;
+    }
+
+    .container header nav ul {
+        display: flex;
+    }
+
+    .container header nav ul li {
+        margin-left: 15px;
+    }
+
+    .container .aside-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container article {
+        padding: 15px 30px;
+    }
+
+    .container footer {
+        padding: 15px 30px;
+    }
 }
