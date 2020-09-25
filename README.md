@@ -13,4 +13,5 @@ Trybe is a school for people who want to build a successful career in technology
 - [x] Web Storage;
 - [x] Event Handlers;
 - [x] Media Query;
+- [x] ES6;
 - [ ] Loading...
