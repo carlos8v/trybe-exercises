@@ -7,7 +7,7 @@ function myRemove(arr, item) {
       newArr.push(arr[i]);
     }
   }
-  assert.deepStrictEqual(arr, [1, 2, 3, 4]);
+  assert.deepStrictEqual(arr, [1, 2, 3, 4], 'The array has changed');
   return newArr;
 }
 
