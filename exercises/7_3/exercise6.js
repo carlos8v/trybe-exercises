@@ -1,6 +1,12 @@
 const assert = require('assert');
 
-const addOne = () => {};
+const addOne = (arr) => {
+    const newArr = [];
+    arr.map(item => {
+        newArr.push(item + 1);
+    })
+    return newArr;
+};
 
 const myArray = [31, 57, 12, 5];
 const unchanged = [31, 57, 12, 5];
