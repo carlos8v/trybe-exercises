@@ -1,13 +1,11 @@
-const { randomNumber } = require('./exerciseFunctions');
-
-jest.mock('./exerciseFunctions');
+const service = require('./exerciseFunctions');
 
 describe('randomNumber', () => {
   it('should return an default number', () => {
-    randomNumber.mockImplementation(() => 10);
-    randomNumber();
-    expect(randomNumber).toHaveBeenCalled();
-    expect(randomNumber()).toBe(10);
-    expect(randomNumber).toHaveBeenCalledTimes(2);
+    service.randomNumber = jest.fn().mockReturnValue(10);
+    service.randomNumber();
+    expect(service.randomNumber).toHaveBeenCalled();
+    expect(service.randomNumber()).toBe(10);
+    expect(service.randomNumber).toHaveBeenCalledTimes(2);
   });
 });
