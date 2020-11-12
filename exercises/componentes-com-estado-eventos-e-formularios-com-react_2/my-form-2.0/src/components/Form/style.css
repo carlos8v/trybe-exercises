@@ -1,0 +1,28 @@
+form {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 480px;
+  background: white;
+  padding: 15px 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-top: 1px solid #999;
+
+}
+
+form fieldset legend {
+  color: #666;
+  padding: 0 5px;
+  background: white;
+  margin-bottom: 10px;
+}
+
+form fieldset div {
+  margin: 15px 10px;
+}
